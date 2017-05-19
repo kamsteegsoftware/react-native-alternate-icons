@@ -4,7 +4,8 @@
  */
 'use strict';
 
-var NativeReactNativeAlternateIcons = require('NativeModules').ReactNativeAlternateIcons;
+import { NativeModules } from 'react-native';
+var NativeReactNativeAlternateIcons = NativeModules.ReactNativeAlternateIcons;
 
 /**
  * High-level docs for the ReactNativeAlternateIcons iOS API can be written here.
