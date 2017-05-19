@@ -1,7 +1,7 @@
 # react-native-alternate-icons
 React Native Alternate Icons for iOS 10.3+
 
-![Demo](http://kamsteegsoftware.nl/react-native-alternate-icons/demo.png)
+![Demo](http://kamsteegsoftware.nl/react-native-alternate-icons/demo.gif)
 
 ## Requirements
 * React Native 0.44+ (only tested on 0.44)
