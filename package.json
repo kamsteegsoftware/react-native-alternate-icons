@@ -11,11 +11,12 @@
     "url": "git+https://github.com/kamsteegsoftware/react-native-alternate-icons.git"
   },
   "keywords": [
-    "React",
-    "Native",
+    "react-component",
+    "react-native",
+    "ios",
+    "android",
     "Alternate",
     "Icons",
-    "for",
     "iOS",
     "10.3+"
   ],
