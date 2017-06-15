@@ -9,12 +9,18 @@
 var warning = require('fbjs/lib/warning');
 
 var ReactNativeAlternateIcons = {
-  setIconName: function( name ) {
-    warning('Not yet implemented for Android.');
-  },
-  reset: function() {
-    warning('Not yet implemented for Android.');
-  }
+  	setIconName: function( name ) {
+    	warning('Not yet implemented for Android.');
+  	},
+  	reset: function() {
+    	warning('Not yet implemented for Android.');
+  	},
+	getCurrentIconName: function(){
+		warning('Not yet implemented for Android.');
+	},
+	deviceSupportsAlternateIcons: function(){
+		warning('Not yet implemented for Android.');
+	}
 };
 
 module.exports = ReactNativeAlternateIcons;
