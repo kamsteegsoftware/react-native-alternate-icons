@@ -1,5 +1,6 @@
 #import "ReactNativeAlternateIcons.h"
 #import <React/RCTLog.h>
+#import <React/RCTClipboard.h>
 #import <UIKit/UIKit.h>
 
 @implementation ReactNativeAlternateIcons
@@ -23,16 +24,27 @@ RCT_EXPORT_METHOD(reset){
     }];
 }
 
-RCT_EXPORT_METHOD(getIconName){
-    return [[UIApplication sharedApplication] alternateIconName];
-}
-
-RCT_EXPORT_METHOD(supportDevice){
-    if( [[UIApplication sharedApplication] supportsAlternateIcons ] ){
-        return YES;
+RCT_EXPORT_METHOD(getIconName:(RCTResponseSenderBlock) callback ){
+    //resolve( [[UIApplication sharedApplication] alternateIconName] );]
+    NSString *name = [[UIApplication sharedApplication] alternateIconName];
+    if( name == nil ){
+        name = @"default";
     }
     
-    return NO;
+    NSDictionary *results = @{
+                              @"iconName":name
+                              };
+    
+    callback(@[results]);
+}
+
+RCT_EXPORT_METHOD(supportDevice:(RCTPromiseResolveBlock) resolve
+                  rejecter:(__unused RCTPromiseRejectBlock) reject){
+    if( [[UIApplication sharedApplication] supportsAlternateIcons ] ){
+        resolve(@"1");
+    }
+    
+    resolve(@"0");
 }
 
 @end
