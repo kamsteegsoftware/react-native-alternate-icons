@@ -66,9 +66,9 @@ import Icons from 'react-native-alternate-icons';
 /** Change the icons of your application */
 Icons.setIconName( iconName );
 /** get Current Icon Name */
-Icons.getIconName();
+Icons.getIconName( callback( result ) );
 /** Reset the icon of your application to the default */
 Icons.reset();
 /** Check if your device does support alternate icons, android returns always false */
-Icons.supportDevice();
+Icons.supportDevice( callback( result ) );
 ```
