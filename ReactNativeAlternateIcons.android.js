@@ -15,11 +15,11 @@ var ReactNativeAlternateIcons = {
   	reset: function() {
     	warning('Not yet implemented for Android.');
   	},
-	getCurrentIconName: function(){
+	getIconName: function(){
 		warning('Not yet implemented for Android.');
 	},
-	deviceSupportsAlternateIcons: function(){
-		warning('Not yet implemented for Android.');
+	supportDevice: function(){
+		return false;
 	}
 };
 
