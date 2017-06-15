@@ -38,13 +38,20 @@ RCT_EXPORT_METHOD(getIconName:(RCTResponseSenderBlock) callback ){
     callback(@[results]);
 }
 
-RCT_EXPORT_METHOD(supportDevice:(RCTPromiseResolveBlock) resolve
-                  rejecter:(__unused RCTPromiseRejectBlock) reject){
+RCT_EXPORT_METHOD(supportDevice:(RCTResponseSenderBlock) callback){
+    NSDictionary *results;
+    
     if( [[UIApplication sharedApplication] supportsAlternateIcons ] ){
-        resolve(@"1");
+        results = @{
+            @"supported":YES
+        };
+    }else{
+        results = @{
+            @"supported":NO
+        };
     }
     
-    resolve(@"0");
+    callback(@[results]);
 }
 
 @end
