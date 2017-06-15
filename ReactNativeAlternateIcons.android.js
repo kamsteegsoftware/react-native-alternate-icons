@@ -18,8 +18,8 @@ var ReactNativeAlternateIcons = {
 	getIconName: function(){
 		warning('Not yet implemented for Android.');
 	},
-	supportDevice: function(){
-		return false;
+	supportDevice: function( callback ){
+		callback( false );
 	}
 };
 

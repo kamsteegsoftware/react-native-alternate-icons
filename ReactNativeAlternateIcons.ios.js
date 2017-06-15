@@ -12,17 +12,21 @@ var NativeReactNativeAlternateIcons = NativeModules.ReactNativeAlternateIcons;
  */
 
 var ReactNativeAlternateIcons = {
-    setIconName: function( name ) {
+    setIconName( name ) {
         NativeReactNativeAlternateIcons.setIconName( name );
     },
-    reset: function() {
+    reset() {
         NativeReactNativeAlternateIcons.reset();
     },
-    getIconName: function(){
-        return NativeReactNativeAlternateIcons.getIconName()
+    getIconName( callback ){
+        NativeReactNativeAlternateIcons.getIconName( ( result ) =>{
+            callback( result.iconName );
+        });
     },
-    supportDevice: function(){
-        return NativeReactNativeAlternateIcons.supportDevice();
+    supportDevice( callback ){
+        NativeReactNativeAlternateIcons.supportDevice( ( result ) => {
+            callback( result.supported );
+        });
     }
 };
 
