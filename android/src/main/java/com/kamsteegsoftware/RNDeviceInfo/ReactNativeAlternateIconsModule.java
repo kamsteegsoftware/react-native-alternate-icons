@@ -14,15 +14,16 @@ import com.facebook.react.bridge.Callback;
 public class ReactNativeAlternateIconsModule extends ReactContextBaseJavaModule {
 
   ReactApplicationContext reactContext;
+  private String targetActivityName;
 
   private static final String MAIN_ACTIVITY_NAME = "MainActivity";
   private static final String TAG = "ReactNativeAlternateIconsModule";
-  private static final String SPLASH_ACTIVITY_NAME = "SplashActivity";
 
-  public ReactNativeAlternateIconsModule(ReactApplicationContext reactContext) {
+  public ReactNativeAlternateIconsModule(ReactApplicationContext reactContext, String targetActivityName) {
     super(reactContext);
 
     this.reactContext = reactContext;
+    this.targetActivityName = targetActivityName;
   }
 
   @Override
@@ -119,7 +120,7 @@ public class ReactNativeAlternateIconsModule extends ReactContextBaseJavaModule 
   }
 
   public String getCurrentAliasName() {
-    String expectedTargetActivity = getCurrentPackageName() + "." + SPLASH_ACTIVITY_NAME;
+    String expectedTargetActivity = getCurrentPackageName() + "." + targetActivityName;
 
     PackageManager pManager = reactContext.getPackageManager();
     String packageName = getCurrentPackageName();

@@ -12,11 +12,22 @@ import java.util.List;
 
 public class ReactNativeAlternateIcons implements ReactPackage {
 
+  private String targetActivityName;
+  private static final String DEFAULT_TARGET_ACTIVITY_NAME = "MainActivity";
+
+  public ReactNativeAlternateIcons(String targetActivityName) {
+    this.targetActivityName = targetActivityName;
+  }
+
+  public ReactNativeAlternateIcons() {
+    this.targetActivityName = DEFAULT_TARGET_ACTIVITY_NAME;
+  }
+
   @Override
   public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
     List<NativeModule> modules = new ArrayList<>();
 
-    modules.add(new ReactNativeAlternateIconsModule(reactContext));
+    modules.add(new ReactNativeAlternateIconsModule(reactContext, targetActivityName));
 
     return modules;
   }
