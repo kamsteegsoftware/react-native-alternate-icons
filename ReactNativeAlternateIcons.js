@@ -28,7 +28,7 @@ var ReactNativeAlternateIcons = {
         NativeReactNativeAlternateIcons.getIconName(result => {
             isIos()
                 ? callback(result.iconName)
-                : callback(iconName);
+                : callback(result);
         });
     },
     supportDevice(callback) {
