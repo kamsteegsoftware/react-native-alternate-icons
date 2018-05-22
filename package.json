@@ -1,8 +1,8 @@
 {
   "name": "react-native-alternate-icons",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "React Native Alternate Icons for iOS 10.3+",
-  "main": "ReactNativeAlternateIcons.ios.js",
+  "main": "ReactNativeAlternateIcons.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
